@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cohete Gráfico Music</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff5f8;
+      color: #222;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 { color: #e83e80; }
+    a {
+      display: inline-block;
+      background: #1DB954;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 Cohete Gráfico Music</h1>
+  <p>Preparando tu canción...</p>
+  <p>Si no se abre automáticamente, tocá acá:</p>
+
+  <a href="https://open.spotify.com/track/2jdAk8ATWIL3dwT47XpRfu">
+    Abrir en Spotify
+  </a>
+
+  <script>
+    const songID = "2jdAk8ATWIL3dwT47XpRfu";
+
+    const spotifyURL =
+      "https://open.spotify.com/track/" + songID;
+
+    const androidIntent =
+      "intent://open.spotify.com/track/" + songID +
+      "#Intent;scheme=https;" +
+      "package=com.spotify.music;" +
+      "S.browser_fallback_url=" +
+      encodeURIComponent(spotifyURL) +
+      ";end";
+
+    if (/Android/i.test(navigator.userAgent)) {
+      window.location.href = androidIntent;
+    } else {
+      window.location.href = spotifyURL;
+    }
+  </script>
+
+</body>
+</html>
