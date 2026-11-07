@@ -4,57 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cohete Gráfico Music</title>
+  <title>Cohete Gráfico Música</title>
   <style>
     body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #171717;
+      color: white;
       font-family: Arial, sans-serif;
-      background: #fff5f8;
-      color: #222;
       text-align: center;
-      padding: 50px 20px;
     }
-    h1 { color: #e83e80; }
+    .contenedor { padding: 30px; }
+    h1 { color: #ffdf00; }
+    p { color: #ddd; }
     a {
       display: inline-block;
+      margin-top: 25px;
+      padding: 18px 28px;
       background: #1DB954;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 30px;
+      color: #000;
       text-decoration: none;
-      margin-top: 20px;
+      font-weight: bold;
+      border-radius: 40px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-
-  <h1>🚀 Cohete Gráfico Music</h1>
-  <p>Preparando tu canción...</p>
-  <p>Si no se abre automáticamente, tocá acá:</p>
-
-  <a href="https://open.spotify.com/track/2jdAk8ATWIL3dwT47XpRfu">
-    Abrir en Spotify
-  </a>
-
-  <script>
-    const songID = "2jdAk8ATWIL3dwT47XpRfu";
-
-    const spotifyURL =
-      "https://open.spotify.com/track/" + songID;
-
-    const androidIntent =
-      "intent://open.spotify.com/track/" + songID +
-      "#Intent;scheme=https;" +
-      "package=com.spotify.music;" +
-      "S.browser_fallback_url=" +
-      encodeURIComponent(spotifyURL) +
-      ";end";
-
-    if (/Android/i.test(navigator.userAgent)) {
-      window.location.href = androidIntent;
-    } else {
-      window.location.href = spotifyURL;
-    }
-  </script>
-
+  <div class="contenedor">
+    <h1>COHETE GRÁFICO 🚀</h1>
+    <p>Tu canción está lista para sonar.</p>
+    <a href="https://open.spotify.com/track/2jdAk8ATWIL3dwT47XpRfu">
+      ▶ ABRIR EN SPOTIFY
+    </a>
+  </div>
 </body>
 </html>
